@@ -1,7 +1,7 @@
 %define module  XML-LibXML
 %define name    perl-%{module}
 %define version 1.63
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:               %{name}
 Version:            %{version}
@@ -22,6 +22,7 @@ BuildRequires:      perl-devel
 BuildRequires:      perl(XML::NamespaceSupport)
 BuildRequires:      perl(XML::SAX)
 BuildRequires:      perl(XML::LibXML::Common)
+Obsoletes:          perl-XML-LibXML-XPathContext
 BuildRoot:          %{_tmppath}/%{name}-%{version}
 
 %description
