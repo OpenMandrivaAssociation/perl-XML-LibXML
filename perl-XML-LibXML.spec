@@ -23,6 +23,7 @@ BuildRequires:      perl(XML::NamespaceSupport)
 BuildRequires:      perl(XML::SAX)
 BuildRequires:      perl(XML::LibXML::Common)
 Obsoletes:          perl-XML-LibXML-XPathContext
+BuildRoot:          %{_tmppath}/%{name}-%{version}
 
 %description
 This module implements much of the DOM Level 2 API as an 
