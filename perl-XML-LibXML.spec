@@ -1,6 +1,6 @@
 %define module  XML-LibXML
 %define name    perl-%{module}
-%define version 1.67
+%define version 1.68
 %define release %mkrel 1
 
 Name:               %{name}
