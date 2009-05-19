@@ -1,7 +1,8 @@
 %define module  XML-LibXML
 %define name    perl-%{module}
 %define version 1.69
-%define release %mkrel 1
+%define release %mkrel 2
+%define Werror_cflags %nil
 
 Name:               %{name}
 Version:            %{version}
@@ -11,7 +12,6 @@ License:            GPL or Artistic
 Group:              Development/Perl
 Url:                http://search.cpan.org/dist/%{module}/
 Source:             http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.tar.bz2
-Patch0:		    XML-LibXML-1.65-shut-up-warnings-in-XML-LibXML-Reader.patch
 Requires(post):     libxml2
 Requires(post):     perl-XML-SAX >= 0.11
 Requires(post):     perl-XML-LibXML-Common
@@ -34,14 +34,9 @@ a high performance DOM.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
-# only when building from CVS (version 1.51-3mdk)
-#CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
-#make docs -i
-# only when building from CVS (version 1.51-3mdk)
-SKIP_SAX_INSTALL=1 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%optflags" SKIP_SAX_INSTALL=1
 %make
 
 %check
