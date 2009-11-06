@@ -1,5 +1,5 @@
 %define upstream_name    XML-LibXML
-%define upstream_version 1.69
+%define upstream_version 1.70
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,8 +9,7 @@ Summary:    Perl Binding for libxml2
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
-Patch0:     XML-LibXML-1.69-fix-format-errors.patch
+Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:      libxml2-devel >= 2.4.20
 BuildRequires:      perl(XML::NamespaceSupport)
@@ -34,7 +33,6 @@ a high performance DOM.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%optflags" SKIP_SAX_INSTALL=1
