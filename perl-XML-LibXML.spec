@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Perl Binding for libxml2
 License:    GPL+ or Artistic
@@ -18,12 +18,9 @@ BuildRequires:      perl(XML::LibXML::Common)
 BuildRequires:      perl-devel
 BuildRoot:          %{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:          perl-XML-LibXML-XPathContext
-Requires(post):     libxml2
+Obsoletes:          perl-XML-LibXML-Common
 Requires(post):     perl-XML-SAX >= 0.11
-Requires(post):     perl-XML-LibXML-Common
-Requires(preun):    libxml2
 Requires(preun):    perl-XML-SAX >= 0.11
-Requires(preun):    perl-XML-LibXML-Common
 
 %description
 This module implements much of the DOM Level 2 API as an 
