@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    Perl Binding for libxml2
 License:    GPL+ or Artistic
@@ -14,7 +14,6 @@ Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstrea
 BuildRequires:      libxml2-devel >= 2.4.20
 BuildRequires:      perl(XML::NamespaceSupport)
 BuildRequires:      perl(XML::SAX)
-BuildRequires:      perl(XML::LibXML::Common)
 BuildRequires:      perl-devel
 BuildRoot:          %{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:          perl-XML-LibXML-XPathContext
