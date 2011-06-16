@@ -1,9 +1,9 @@
 %define upstream_name    XML-LibXML
-%define upstream_version 1.70
+%define upstream_version 1.71
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 8
+Release:    %mkrel 1
 
 Summary:    Perl Binding for libxml2
 License:    GPL+ or Artistic
