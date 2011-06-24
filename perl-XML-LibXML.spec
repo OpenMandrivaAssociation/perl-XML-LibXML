@@ -1,5 +1,5 @@
 %define upstream_name    XML-LibXML
-%define upstream_version 1.71
+%define upstream_version 1.74
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
