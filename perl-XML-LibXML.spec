@@ -1,9 +1,9 @@
 %define upstream_name    XML-LibXML
-%define upstream_version 1.77
+%define upstream_version 1.89
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    1
 
 Summary:    Perl Binding for libxml2
 License:    GPL+ or Artistic
@@ -15,7 +15,6 @@ BuildRequires:      libxml2-devel >= 2.4.20
 BuildRequires:      perl(XML::NamespaceSupport)
 BuildRequires:      perl(XML::SAX)
 BuildRequires:      perl-devel
-BuildRoot:          %{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:          perl-XML-LibXML-XPathContext
 Obsoletes:          perl-XML-LibXML-Common
 Requires(post):     perl-XML-SAX >= 0.11
@@ -37,11 +36,7 @@ a high performance DOM.
 %check
 %{__make} test
 
-%clean 
-rm -rf %{buildroot}
-
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %preun -p %{__perl}
@@ -53,7 +48,6 @@ use XML::SAX;
 XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 
 %files
-%defattr(-,root,root)
 %doc Changes README example/*
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
