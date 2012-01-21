@@ -19,8 +19,6 @@ Obsoletes:          perl-XML-LibXML-XPathContext
 Obsoletes:          perl-XML-LibXML-Common
 Requires(post):     perl-XML-SAX >= 0.11
 Requires(preun):    perl-XML-SAX >= 0.11
-# temporary dep due to the perl-5.14 bump
-BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
 
 %description
 This module implements much of the DOM Level 2 API as an 
