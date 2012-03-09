@@ -1,24 +1,24 @@
-%define upstream_name    XML-LibXML
-%define upstream_version 1.90
+%define	upstream_name	XML-LibXML
+%define	upstream_version 1.90
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    Perl Binding for libxml2
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl Binding for libxml2
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:      libxml2-devel >= 2.4.20
-BuildRequires:      perl(XML::NamespaceSupport)
-BuildRequires:      perl(XML::SAX)
-BuildRequires:      perl-devel
-Obsoletes:          perl-XML-LibXML-XPathContext
-Obsoletes:          perl-XML-LibXML-Common
-Requires(post):     perl-XML-SAX >= 0.11
-Requires(preun):    perl-XML-SAX >= 0.11
+BuildRequires:	libxml2-devel >= 2.4.20
+BuildRequires:	perl(XML::NamespaceSupport)
+BuildRequires:	perl(XML::SAX)
+BuildRequires:	perl-devel
+Obsoletes:	perl-XML-LibXML-XPathContext
+Obsoletes:	perl-XML-LibXML-Common
+Requires(post):	perl-XML-SAX >= 0.11
+Requires(preun):perl-XML-SAX >= 0.11
 
 %description
 This module implements much of the DOM Level 2 API as an 
@@ -30,11 +30,11 @@ a high performance DOM.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%optflags" SKIP_SAX_INSTALL=1
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1
 %make
 
 %check
-%{__make} test
+make test
 
 %install
 %makeinstall_std
@@ -52,4 +52,3 @@ XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
-
