@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Perl Binding for libxml2
 License:	GPL+ or Artistic
@@ -52,3 +52,10 @@ XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
+
+
+%changelog
+* Fri May 25 2012 Crispin Boylan <crisb@mandriva.org> 1.980.0-1
++ Revision: 800699
+- New release
+
