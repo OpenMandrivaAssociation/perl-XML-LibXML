@@ -1,17 +1,16 @@
 %define	module	XML-LibXML
-%define	modver	1.98
-
-Name:		perl-%{module}
-Version:	%{perl_convert_version %{modver}}
-Release:	3
+%define	modver	2.0014
 
 Summary:	Perl Binding for libxml2
+Name:		perl-%{module}
+Version:	%{perl_convert_version %{modver}}
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/XML/%{module}-%{modver}.tar.gz
 
-BuildRequires:	libxml2-devel >= 2.4.20
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	perl(XML::NamespaceSupport)
 BuildRequires:	perl(XML::SAX)
 BuildRequires:	perl-devel
@@ -52,12 +51,4 @@ XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
-
-%changelog
-* Wed Dec 19 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.980.0-3
-- rebuild for new perl
-
-* Fri May 25 2012 Crispin Boylan <crisb@mandriva.org> 1.980.0-1
-+ Revision: 800699
-- New release
 
