@@ -4,7 +4,7 @@
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
 Version:	%{perl_convert_version %{modver}}
-Release:	5
+Release:	6
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
