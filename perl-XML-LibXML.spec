@@ -1,14 +1,14 @@
 %define	module	XML-LibXML
-%define	modver	2.0014
+%define modver 2.0110
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
-Version:	%{perl_convert_version %{modver}}
-Release:	6
+Version:	%perl_convert_version %{modver}
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{module}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{modver}.tar.gz
 
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	perl(XML::NamespaceSupport)
@@ -51,4 +51,5 @@ XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
+
 
