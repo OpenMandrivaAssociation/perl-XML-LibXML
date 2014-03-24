@@ -1,5 +1,5 @@
 %define	module	XML-LibXML
-%define modver 2.0112
+%define modver 2.0113
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
@@ -51,6 +51,7 @@ XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
+
 
 
 
