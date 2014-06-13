@@ -2,5 +2,6 @@ removed_sources:
   XML-LibXML-2.0014.tar.gz: 3ddaa405047ceac4099eee21ea964cdb9d7ec444
   XML-LibXML-2.0110.tar.gz: dc99cf4b39dfe74abb3e45ae18275e6ba823f6c9
   XML-LibXML-2.0112.tar.gz: 8abe8e664e5a102e272d4187b5bff049beb2a591
-sources:
   XML-LibXML-2.0113.tar.gz: 4d1a0f1676e9b43f82941753b4b44719ec0afe0a
+sources:
+  XML-LibXML-2.0116.tar.gz: 12b0c3add404a8139def5afff2cfc18dad2b1f27
