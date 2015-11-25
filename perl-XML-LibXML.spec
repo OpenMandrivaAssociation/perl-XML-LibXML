@@ -1,16 +1,14 @@
-%define	module	XML-LibXML
-%define modver 2.0117
+%define	module XML-LibXML
+%define modver 2.0122
 
 Summary:	Perl Binding for libxml2
-
 Name:		perl-%{module}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{modver}.tar.gz
-
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	perl(XML::NamespaceSupport)
 BuildRequires:	perl(XML::SAX)
@@ -18,7 +16,7 @@ BuildRequires:	perl-devel
 Obsoletes:	perl-XML-LibXML-XPathContext
 Obsoletes:	perl-XML-LibXML-Common
 Requires(post):	perl-XML-SAX >= 0.11
-Requires(preun):perl-XML-SAX >= 0.11
+Requires(preun):	perl-XML-SAX >= 0.11
 
 %description
 This module implements much of the DOM Level 2 API as an 
