@@ -28,7 +28,7 @@ a high performance DOM.
 %setup -q -n %{module}-%{modver}
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 %make
 
 %check
