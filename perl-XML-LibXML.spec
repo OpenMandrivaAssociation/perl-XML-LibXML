@@ -15,6 +15,8 @@ BuildRequires:	perl(XML::SAX)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	perl-devel
+# For tests only
+BuildRequires:	perl(Test::More)
 Obsoletes:	perl-XML-LibXML-XPathContext
 Obsoletes:	perl-XML-LibXML-Common
 Requires(post):	perl-XML-SAX >= 0.11
