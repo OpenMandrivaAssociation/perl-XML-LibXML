@@ -12,6 +12,8 @@ Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{modver}.tar.gz
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	perl(XML::NamespaceSupport)
 BuildRequires:	perl(XML::SAX)
+BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	perl-devel
 Obsoletes:	perl-XML-LibXML-XPathContext
 Obsoletes:	perl-XML-LibXML-Common
