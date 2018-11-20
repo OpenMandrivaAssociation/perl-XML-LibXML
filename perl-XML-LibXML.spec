@@ -4,7 +4,7 @@
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
@@ -29,17 +29,17 @@ and highly capable validating XML parser library, as well as
 a high performance DOM.
 
 %prep
-%setup -q -n %{module}-%{modver}
+%autosetup -n %{module}-%{modver} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %preun -p %{__perl}
 use XML::SAX;
