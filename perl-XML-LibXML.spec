@@ -1,10 +1,10 @@
 %define	module XML-LibXML
-%define modver 2.0132
+%define modver 2.0201
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
