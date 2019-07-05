@@ -35,9 +35,6 @@ a high performance DOM.
 perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 %make_build
 
-%check
-make test
-
 %install
 %make_install
 
