@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{modver}.tar.gz
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:  perl(Alien::Libxml2)
 BuildRequires:	perl(XML::NamespaceSupport)
 BuildRequires:	perl(XML::SAX)
 BuildRequires:	pkgconfig(zlib)
