@@ -39,13 +39,13 @@ perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DE
 %install
 %make_install
 
-%preun -p %{__perl}
-use XML::SAX;
-XML::SAX->remove_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
-
-%post -p %{__perl}
-use XML::SAX;
-XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
+#preun -p %{__perl}
+#use XML::SAX;
+#XML::SAX->remove_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
+#
+#post -p %{__perl}
+#use XML::SAX;
+#XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 
 %files
 %doc Changes README example/*
