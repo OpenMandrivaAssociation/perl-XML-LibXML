@@ -1,5 +1,5 @@
 %define	module XML-LibXML
-%define modver 2.0205
+%define modver 2.0207
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
