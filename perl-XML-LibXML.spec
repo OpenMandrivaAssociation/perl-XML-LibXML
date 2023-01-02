@@ -1,15 +1,14 @@
-%define _empty_manifest_terminate_build 0
 %define	module XML-LibXML
-%define modver 2.0207
+%undefine _debugsource_packages
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
-Version:	%perl_convert_version %{modver}
+Version:	2.0208
 Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{version}.tar.gz
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:  perl(Alien::Libxml2)
 BuildRequires:	perl(XML::NamespaceSupport)
@@ -31,22 +30,14 @@ and highly capable validating XML parser library, as well as
 a high performance DOM.
 
 %prep
-%autosetup -n %{module}-%{modver} -p1
+%autosetup -n %{module}-%{version} -p1
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 %make_build
 
 %install
 %make_install
-
-#preun -p %{__perl}
-#use XML::SAX;
-#XML::SAX->remove_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
-#
-#post -p %{__perl}
-#use XML::SAX;
-#XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers();
 
 %files
 %doc Changes README example/*
