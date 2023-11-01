@@ -3,12 +3,13 @@
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
-Version:	2.0208
-Release:	2
+Version:	2.0209
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-LibXML-%{version}.tar.gz
+Patch0:		LibXML-2.0209-compile.patch
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:  perl(Alien::Libxml2)
 BuildRequires:	perl(XML::NamespaceSupport)
