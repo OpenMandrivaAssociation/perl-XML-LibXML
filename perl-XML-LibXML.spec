@@ -9,7 +9,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}/
 Source0:	https://www.cpan.org/modules/by-module/XML/XML-LibXML-%{version}.tar.gz
-Patch0:		LibXML-2.0209-compile.patch
+#Patch0:		LibXML-2.0209-compile.patch
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:  perl(Alien::Libxml2)
 BuildRequires:	perl(XML::NamespaceSupport)
