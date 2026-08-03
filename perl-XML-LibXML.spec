@@ -4,7 +4,7 @@
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
 Version:	2.0210
-Release:	5
+Release:	6
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}/
@@ -13,6 +13,7 @@ Source0:	https://www.cpan.org/modules/by-module/XML/XML-LibXML-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:  perl(Alien::Libxml2)
+BuildRequires:	perl(Alien::Base::Wrapper)
 BuildRequires:	perl(JSON::PP)
 BuildRequires:	perl(XML::NamespaceSupport)
 BuildRequires:	perl(XML::SAX)
@@ -34,9 +35,9 @@ a high performance DOM.
 
 %prep
 %autosetup -n %{module}-%{version} -p1
-perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 
 %build
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DEBUG=1
 %make_build
 
 %install
