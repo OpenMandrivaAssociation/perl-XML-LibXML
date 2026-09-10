@@ -3,8 +3,8 @@
 
 Summary:	Perl Binding for libxml2
 Name:		perl-%{module}
-Version:	2.0210
-Release:	6
+Version:	2.0213
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}/
