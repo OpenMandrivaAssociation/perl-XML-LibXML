@@ -44,7 +44,7 @@ perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" SKIP_SAX_INSTALL=1 DE
 %make_install
 
 %files
-%doc Changes README example/*
+%doc Changes README.md example/*
 %{perl_vendorarch}/auto/XML/LibXML
 %{perl_vendorarch}/XML/LibXML*
 %{_mandir}/*/*
